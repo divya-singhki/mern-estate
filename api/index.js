@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import userRouter from './routes/user.route.js';
 
 mongoose.connect("mongodb://127.0.0.1:27017/estate").then(()=>{
     console.log('connected to MongoDB!');
@@ -15,3 +16,6 @@ app.listen(3000,()=>{
     console.log('server is running on port 3000 !!!');
     
 });
+
+
+app.use("/api/user",userRouter);
