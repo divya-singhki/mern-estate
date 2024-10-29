@@ -14,8 +14,13 @@
     password:{
         type: String,
         required: true, 
-    }
+    },
+  avatar:{
+    type:String,
+    default:'https://th.bing.com/th/id/OIP.7O4_GREtLbxqPdJCTmfatQHaHa?rs=1&pid=ImgDetMain'
+  },
 
- },{timestamps: true});
+ },
+ {timestamps: true});
     const User= mongoose.model('User',userSchema);
     export default User;
